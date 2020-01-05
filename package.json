@@ -1,0 +1,13 @@
+{
+  "name": "exchange-rates-crawler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/alexsellam/exchange-rates-crawler",
+  "author": "Alex Sellam <alex.sellam@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "firebase-admin": "^8.9.0"
+  }
+}
