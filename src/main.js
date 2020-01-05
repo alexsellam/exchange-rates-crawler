@@ -1,6 +1,8 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const url = "https://www.iban.com/exchange-rates";
+const { Worker }  = require('worker_threads');
+let workDir = __dirname+"/dbWorker.js";
 
 fetchData(url).then( (res) => {
     const html = res.data;
@@ -23,7 +25,7 @@ async function fetchData(url){
     return response; 
 }
 
-let workDir = __dirname+"/dbWorker.js";
+
 
 const mainFunc = async () => {
     const url = "https://www.iban.com/exchange-rates";
@@ -48,6 +50,7 @@ const mainFunc = async () => {
         formatStr(newStr, dataObj)
     });
     return dataObj;
+
 }
 
 mainFunc().then((res) => {
